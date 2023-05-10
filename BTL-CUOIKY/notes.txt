@@ -1,0 +1,96 @@
+django-admin startproject image_service
+python3 manage.py migrate
+python3 manage.py runserver 8888
+django-admin startapp image_model
+python3 manage.py createsuperuser
+python3 manage.py makemigrations
+
+python3 manage.py collectstatic
+
+
+User service:
+python3 manage.py runserver 8000
+Product service:
+python3 manage.py runserver 3001
+Payment service:
+python3 manage.py runserver 4001
+Shipment service:
+python3 manage.py runserver 5000
+
+Book: 
+python3 manage.py runserver 3002
+CLothe:
+python3 manage.py runserver 3003
+Electronic:
+python3 manage.py runserver 3004
+Shoe:
+python3 manage.py runserver 3005
+
+cart service:
+python3 manage.py runserver 3006
+comment service: 
+python3 manage.py runserver 3007
+image service: done
+python3 manage.py runserver 3008
+order service:
+python3 manage.py runserver 3009
+
+
+
+APIS:
+User service:
+post: http://127.0.0.1:8000/model/register/
+    http://127.0.0.1:8000/login/userlogin/
+    http://127.0.0.1:8000/infor/userinfo/
+Product service:
+Get: http://127.0.0.1:3001/product/products/
+Payment service:
+Post: http://127.0.0.1:4001/payment/payment/
+post: http://127.0.0.1:4001/payment/initiate_payment/
+post: http://127.0.0.1:4001/payment/payment_status/
+Shipment service:
+Post: http://127.0.0.1:5000/shipment/shipment_status/
+
+Book: 
+Get: http://127.0.0.1:3002/book/books/
+Post: http://127.0.0.1:3002/book/create_book/
+Test UI: http://127.0.0.1:3002/book/book_detail/7-vien-ngoc-rong
+CLothe:
+Get: http://127.0.0.1:3003/clothe/clothes/
+Post: http://127.0.0.1:3003/clothe/create_clothe/
+Test Ui: http://127.0.0.1:3003/clothe/clothe_detail/ao-bo-co-lv-gc-dior-cuc-ep-mua-he-2023-fom-ao-unisex-nam-nu/
+Electronic:
+get: http://127.0.0.1:3004/electronic/electronics/
+post: http://127.0.0.1:3003/electronic/create_electronic/
+Test Ui: http://127.0.0.1:3004/electronic/electronic_detail/may-giat-say-xiaomi-mijia-xm21-15kg-chinh-hang/
+Shoe:
+Get: http://127.0.0.1:3005/shoe/shoes/
+Post: http://127.0.0.1:3003/shoe/create_shoe/
+Test Ui: http://127.0.0.1:3005/shoe/shoe_detail/giay-air-force-1/
+
+cart service:
+
+comment service: 
+
+image service: done
+Get: http://127.0.0.1:3008/image/images/doraemon (slug: doraemon)
+order service:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

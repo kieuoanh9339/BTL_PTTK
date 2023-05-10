@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./user_service",
+        "./component_service/cart_service"
+    ]
+}
